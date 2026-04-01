@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshFusion Foods Limited – Premium Natural Food Products</title>
+  <meta name="description" content="Premium natural and hygienically processed food products. Delivered fresh nationwide and internationally.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="images/WhatsApp_Image_2026-04-01_at_9.13.54_AM-removebg-preview.png" alt="FreshFusion Foods Logo" class="nav-logo-img">
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#bread">Bread</a></li>
+    <li><a href="#delivery">Delivery</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="booking.html">Order</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <button class="nav-cart-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      Cart <span class="cart-badge">0</span>
+    </button>
+  </div>
+
+  <!-- Mobile right side: cart + hamburger -->
+  <div style="display:flex;align-items:center;gap:10px;">
+    <button class="mobile-cart-btn" aria-label="Cart">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="mobile-cart-count">0</span>
+    </button>
+    <button class="hamburger" aria-label="Open Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <a href="#products">Products</a>
+  <a href="#bread">Bread</a>
+  <a href="#delivery">Delivery</a>
+  <a href="#reviews">Reviews</a>
+  <a href="shop.html">Shop All</a>
+  <a href="booking.html">Place Order</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <!-- Slide 1 -->
+  <div class="hero-slide">
+    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=85" alt="Fresh natural food market">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-inner">
+        <span class="hero-badge">100% Natural &amp; Hygienically Processed</span>
+        <h1 class="hero-title">Premium Natural Food<br>Products <span>Delivered Fresh</span></h1>
+        <p class="hero-sub">Trusted quality, hygienically processed, delivered nationwide and internationally.</p>
+        <div class="hero-about">
+          <p>FreshFusion Foods Limited is committed to delivering high-quality, natural, and hygienically processed food products. From farm to table, we ensure freshness, taste, and nutritional value in every package.</p>
+        </div>
+        <div class="hero-btns">
+          <a href="shop.html" class="btn-primary">Shop Now</a>
+          <a href="https://wa.me/2349031538922?text=Hello%20FreshFusion%20Foods%2C%20I%20want%20to%20place%20an%20order." target="_blank" class="btn-ghost">Order via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="hero-slide">
+    <img src="https://images.unsplash.com/photo-1506484381205-f7945653044d?w=1600&q=85" alt="Natural spices and grains">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-inner">
+        <span class="hero-badge">Farm to Table Freshness</span>
+        <h1 class="hero-title">Pure Spices, Grains<br>&amp; <span>Herbal Blends</span></h1>
+        <p class="hero-sub">Ginger, turmeric, cinnamon, zobo mix and more — sourced directly from trusted farms.</p>
+        <div class="hero-about">
+          <p>Every spice and grain we sell is carefully selected, cleaned, and processed to preserve its natural potency, flavor, and nutritional integrity from source to your kitchen.</p>
+        </div>
+        <div class="hero-btns">
+          <a href="#products" class="btn-primary">View Products</a>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20spices." target="_blank" class="btn-ghost">Order via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="hero-slide">
+    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&q=85" alt="Fresh nutritious food">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-inner">
+        <span class="hero-badge">Same Day Delivery in Akwa Ibom</span>
+        <h1 class="hero-title">Fresh Bread &amp;<br><span>Natural Cereals</span> Daily</h1>
+        <p class="hero-sub">Wheat bread, Tom Brown, Dry Pap, Fufu Flour — freshly prepared and delivered to your door.</p>
+        <div class="hero-about">
+          <p>Our bread is baked fresh every morning, and our cereals and flours are milled and packed hygienically so your family always gets the very best nutrition and taste.</p>
+        </div>
+        <div class="hero-btns">
+          <a href="#bread" class="btn-primary">Order Bread</a>
+          <a href="booking.html" class="btn-ghost">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-dots">
+    <button class="hero-dot" aria-label="Slide 1"></button>
+    <button class="hero-dot" aria-label="Slide 2"></button>
+    <button class="hero-dot" aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- ===================== PRODUCTS ===================== -->
+<section class="section section-bg" id="products">
+  <div class="section-header section-center" data-aos="fade-up">
+    <span class="section-label">Our Products</span>
+    <h2 class="section-title">Fresh From <span>Farm to Table</span></h2>
+    <p class="section-desc">Every product is carefully sourced, hygienically processed, and packed to preserve maximum nutritional value.</p>
+  </div>
+  <div class="products-grid">
+
+    <!-- Tigernut Powder -->
+    <div class="product-card" data-product data-name="Tigernut Powder" data-price="14000" data-aos="fade-up">
+      <div class="product-img-wrap">
+        <span class="product-tag">Best Seller</span>
+        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80" alt="Tigernut Powder">
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="Tigernut Powder 2">
+        <img src="https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=600&q=80" alt="Tigernut Powder 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Tigernut Powder</div>
+        <div class="product-desc">Naturally sweet and rich in nutrients, perfect for healthy drinks and meals.</div>
+        <select class="size-select">
+          <option value="1kg" data-price="14000">1kg – &#8358;14,000</option>
+          <option value="500g" data-price="7500">500g – &#8358;7,500</option>
+        </select>
+        <div class="product-price">&#8358;14,000</div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Tigernut%20Powder" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Groundnut -->
+    <div class="product-card" data-product data-name="Groundnut" data-price="2500" data-aos="fade-up" data-aos-delay="60">
+      <div class="product-img-wrap">
+        <span class="product-tag">Natural</span>
+        <img src="https://images.unsplash.com/photo-1567306226408-c60e6438e93f?w=600&q=80" alt="Groundnut">
+        <img src="https://images.unsplash.com/photo-1605289982774-9a6fef564df8?w=600&q=80" alt="Groundnut 2">
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="Groundnut 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Groundnut</div>
+        <div class="product-desc">Crunchy, protein-rich roasted groundnuts processed for freshness. 350g pack.</div>
+        <div class="product-price">&#8358;2,500 <small>/ 350g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Groundnut" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tigernut Seeds -->
+    <div class="product-card" data-product data-name="Tigernut Seeds" data-price="3000" data-aos="fade-up" data-aos-delay="120">
+      <div class="product-img-wrap">
+        <span class="product-tag">Raw Natural</span>
+        <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&q=80" alt="Tigernut Seeds">
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="Tigernut Seeds 2">
+        <img src="https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=600&q=80" alt="Tigernut Seeds 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Tigernut Seeds</div>
+        <div class="product-desc">Raw natural tigernuts ideal for milk production and healthy snacking. 350g pack.</div>
+        <div class="product-price">&#8358;3,000 <small>/ 350g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Tigernut%20Seeds" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tom Brown -->
+    <div class="product-card" data-product data-name="Tom Brown" data-price="4000" data-aos="fade-up">
+      <div class="product-img-wrap">
+        <span class="product-tag">Kids Friendly</span>
+        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80" alt="Tom Brown">
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="Tom Brown 2">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Tom Brown 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Tom Brown</div>
+        <div class="product-desc">A nutritious mixed grain cereal ideal for both adults and children. 500g pack.</div>
+        <div class="product-price">&#8358;4,000 <small>/ 500g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Tom%20Brown" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Afang Leaves -->
+    <div class="product-card" data-product data-name="Afang Leaves" data-price="5000" data-aos="fade-up" data-aos-delay="60">
+      <div class="product-img-wrap">
+        <span class="product-tag">Rich in Iron</span>
+        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Afang Leaves">
+        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80" alt="Afang Leaves 2">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Afang Leaves 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Afang Leaves</div>
+        <div class="product-desc">Finely processed leaves rich in fiber, calcium, and iron. 150g pack.</div>
+        <div class="product-price">&#8358;5,000 <small>/ 150g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Afang%20Leaves" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Atama Leaves -->
+    <div class="product-card" data-product data-name="Atama Leaves" data-price="2000" data-aos="fade-up" data-aos-delay="120">
+      <div class="product-img-wrap">
+        <span class="product-tag">Organic</span>
+        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80" alt="Atama Leaves">
+        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Atama Leaves 2">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Atama Leaves 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Atama Leaves</div>
+        <div class="product-desc">Dried atama leaves for native soups and broths. Rich natural flavor. 300g pack.</div>
+        <div class="product-price">&#8358;2,000 <small>/ 300g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Atama%20Leaves" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pumpkin Leaves -->
+    <div class="product-card" data-product data-name="Pumpkin Leaves" data-price="2500" data-aos="fade-up">
+      <div class="product-img-wrap">
+        <span class="product-tag">Nutritious</span>
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Pumpkin Leaves">
+        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80" alt="Pumpkin Leaves 2">
+        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Pumpkin Leaves 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Pumpkin Leaves</div>
+        <div class="product-desc">Dried ugu leaves packed with vitamins and minerals. Ideal for soups and stews. 300g pack.</div>
+        <div class="product-price">&#8358;2,500 <small>/ 300g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Pumpkin%20Leaves" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zobo Herbal Mix -->
+    <div class="product-card" data-product data-name="Zobo Herbal Mix" data-price="4500" data-aos="fade-up" data-aos-delay="60">
+      <div class="product-img-wrap">
+        <span class="product-tag">Herbal</span>
+        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="Zobo Herbal Mix">
+        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=600&q=80" alt="Zobo Herbal Mix 2">
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80" alt="Zobo Herbal Mix 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Zobo Herbal Mix</div>
+        <div class="product-desc">Premium dried hibiscus blend for a rich, healthy zobo drink. 250g pack.</div>
+        <div class="product-price">&#8358;4,500 <small>/ 250g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Zobo%20Herbal%20Mix" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dry Pap -->
+    <div class="product-card" data-product data-name="Dry Pap" data-price="6500" data-aos="fade-up" data-aos-delay="120">
+      <div class="product-img-wrap">
+        <span class="product-tag">Popular</span>
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="Dry Pap">
+        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80" alt="Dry Pap 2">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Dry Pap 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Dry Pap</div>
+        <div class="product-desc">Smooth, nutritious corn pap ideal for all ages. Convenient dry form for easy preparation.</div>
+        <select class="size-select">
+          <option value="1kg" data-price="6500">1kg – &#8358;6,500</option>
+          <option value="500g" data-price="3500">500g – &#8358;3,500</option>
+        </select>
+        <div class="product-price">&#8358;6,500</div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Dry%20Pap" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fufu Flour -->
+    <div class="product-card" data-product data-name="Fufu Flour" data-price="5000" data-aos="fade-up">
+      <div class="product-img-wrap">
+        <span class="product-tag">Staple</span>
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Fufu Flour">
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="Fufu Flour 2">
+        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80" alt="Fufu Flour 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Fufu Flour</div>
+        <div class="product-desc">Premium cassava fufu flour for a smooth, stretchy fufu every time. 1kg pack.</div>
+        <div class="product-price">&#8358;5,000 <small>/ 1kg</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Fufu%20Flour" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ginger Powder -->
+    <div class="product-card" data-product data-name="Ginger Powder" data-price="5000" data-aos="fade-up" data-aos-delay="60">
+      <div class="product-img-wrap">
+        <span class="product-tag">Spice</span>
+        <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=80" alt="Ginger Powder">
+        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80" alt="Ginger Powder 2">
+        <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" alt="Ginger Powder 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Ginger Powder</div>
+        <div class="product-desc">Pure ground ginger with strong aroma and natural anti-inflammatory benefits. 100g.</div>
+        <div class="product-price">&#8358;5,000 <small>/ 100g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Ginger%20Powder" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Turmeric -->
+    <div class="product-card" data-product data-name="Turmeric Powder" data-price="3000" data-aos="fade-up" data-aos-delay="120">
+      <div class="product-img-wrap">
+        <span class="product-tag">Spice</span>
+        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80" alt="Turmeric Powder">
+        <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=80" alt="Turmeric Powder 2">
+        <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" alt="Turmeric Powder 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Turmeric Powder</div>
+        <div class="product-desc">Golden spice with powerful antioxidant and anti-inflammatory properties. 100g.</div>
+        <div class="product-price">&#8358;3,000 <small>/ 100g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Turmeric%20Powder" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cinnamon -->
+    <div class="product-card" data-product data-name="Cinnamon Powder" data-price="4000" data-aos="fade-up">
+      <div class="product-img-wrap">
+        <span class="product-tag">Spice</span>
+        <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" alt="Cinnamon Powder">
+        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80" alt="Cinnamon Powder 2">
+        <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=80" alt="Cinnamon Powder 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Cinnamon Powder</div>
+        <div class="product-desc">Warm, sweet cinnamon rich in antioxidants. Great for baking, drinks, and cooking. 100g.</div>
+        <div class="product-price">&#8358;4,000 <small>/ 100g</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Cinnamon%20Powder" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cocoyam Flour -->
+    <div class="product-card" data-product data-name="Cocoyam Flour" data-price="6000" data-aos="fade-up" data-aos-delay="60">
+      <div class="product-img-wrap">
+        <span class="product-tag">Flour</span>
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="Cocoyam Flour">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Cocoyam Flour 2">
+        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80" alt="Cocoyam Flour 3">
+        <div class="img-dots"><button class="img-dot"></button><button class="img-dot"></button><button class="img-dot"></button></div>
+      </div>
+      <div class="product-body">
+        <div class="product-name">Cocoyam Flour</div>
+        <div class="product-desc">Smooth cocoyam flour for thickening soups and making traditional dishes. 1kg pack.</div>
+        <div class="product-price">&#8358;6,000 <small>/ 1kg</small></div>
+        <div class="product-actions">
+          <button class="btn-cart">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Cocoyam%20Flour" target="_blank" class="btn-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="text-align:center;margin-top:46px;" data-aos="fade-up">
+    <a href="shop.html" class="btn-primary" style="display:inline-block;">View All Products</a>
+  </div>
+</section>
+
+<!-- ===================== BREAD ===================== -->
+<section class="section" id="bread">
+  <div class="section-header section-center" data-aos="fade-up">
+    <span class="section-label">Baked Fresh Daily</span>
+    <h2 class="section-title">Fresh Daily <span>Bread</span></h2>
+    <p class="section-desc">Our freshly baked bread is soft, nutritious, and made with high-quality ingredients. Perfect for breakfast and everyday meals.</p>
+  </div>
+  <div class="bread-grid" data-aos="fade-up">
+    <div class="bread-card" data-name="Wheat Bread" data-price="1500">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700&q=80" alt="Wheat Bread">
+      <div class="bread-body">
+        <h3>Wheat Bread</h3>
+        <p>Wholesome, fiber-rich wheat bread baked fresh daily. Soft texture with a hearty, nutty flavor — perfect for sandwiches and everyday meals.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn-bread-cart btn-cart" style="flex:1;max-width:160px;">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Wheat%20Bread" target="_blank" class="btn-order">Order via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="bread-card" data-name="Normal Bread" data-price="1200">
+      <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=700&q=80" alt="Normal Bread">
+      <div class="bread-body">
+        <h3>Normal Bread</h3>
+        <p>Classic soft loaf baked fresh every morning with premium-grade flour. Light, fluffy, and ideal for the whole family at any meal of the day.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn-bread-cart btn-cart" style="flex:1;max-width:160px;">Add to Cart</button>
+          <a href="https://wa.me/2349031538922?text=Hello%2C%20I%20want%20to%20order%20Normal%20Bread" target="_blank" class="btn-order">Order via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section class="section section-bg" id="why">
+  <div class="section-header section-center" data-aos="fade-up">
+    <span class="section-label">Why FreshFusion</span>
+    <h2 class="section-title">Quality You Can <span>Trust</span></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card" data-aos="fade-up">
+      <div class="why-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#6B8E23" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+      <h3>100% Natural Ingredients</h3>
+      <p>Every product is sourced directly from trusted farms with no artificial additives or preservatives.</p>
+    </div>
+    <div class="why-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="why-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#6B8E23" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Hygienically Processed</h3>
+      <p>Processed under strict hygiene standards in our certified facility to ensure safety in every pack.</p>
+    </div>
+    <div class="why-card" data-aos="fade-up" data-aos-delay="160">
+      <div class="why-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#6B8E23" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+      <h3>Fast and Reliable Delivery</h3>
+      <p>Same-day delivery in Akwa Ibom, and prompt nationwide and international shipping for all orders.</p>
+    </div>
+    <div class="why-card" data-aos="fade-up" data-aos-delay="240">
+      <div class="why-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#6B8E23" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <h3>Trusted Quality</h3>
+      <p>Hundreds of satisfied customers trust FreshFusion Foods for their household and business needs.</p>
+    </div>
+  </div>
+  <div class="why-cta" data-aos="fade-up">
+    <a href="shop.html" class="btn-primary" style="display:inline-block;">Browse Products</a>
+  </div>
+</section>
+
+<!-- ===================== DELIVERY ===================== -->
+<section class="section" id="delivery">
+  <div class="section-header section-center" data-aos="fade-up">
+    <span class="section-label">Shipping</span>
+    <h2 class="section-title">We Deliver <span>Everywhere</span></h2>
+    <p class="section-desc">From your local neighborhood to international destinations, FreshFusion Foods reaches you wherever you are.</p>
+  </div>
+  <div class="delivery-grid">
+    <div class="delivery-card local" data-aos="fade-up">
+      <span class="delivery-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#6B8E23" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+      <h3>Akwa Ibom</h3>
+      <span class="delivery-time">Same Day</span>
+      <p>Orders placed before 2PM are delivered the same day within Akwa Ibom State.</p>
+    </div>
+    <div class="delivery-card national" data-aos="fade-up" data-aos-delay="100">
+      <span class="delivery-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#D96F1A" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+      <h3>Nationwide</h3>
+      <span class="delivery-time">2–3 Days</span>
+      <p>We deliver to all 36 states across Nigeria through our reliable courier partners.</p>
+    </div>
+    <div class="delivery-card intl" data-aos="fade-up" data-aos-delay="200">
+      <span class="delivery-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3b5bdb" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+      <h3>International</h3>
+      <span class="delivery-time">~7 Days</span>
+      <p>We ship internationally to the diaspora and food businesses worldwide. Contact us for rates.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="section section-bg" id="reviews">
+  <div class="section-header section-center" data-aos="fade-up">
+    <span class="section-label">Testimonials</span>
+    <h2 class="section-title">What Our <span>Customers Say</span></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card" data-aos="fade-up">
+      <div class="review-top"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=120&q=80" alt="Amaka O." class="review-avatar"><div><div class="review-name">Amaka O.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <p class="review-text">"The tigernut powder is exceptional — so fresh and smooth. I use it every morning for my drinks and the quality never disappoints. FreshFusion is my go-to."</p>
+    </div>
+    <div class="review-card" data-aos="fade-up" data-aos-delay="60">
+      <div class="review-top"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80" alt="Emeka N." class="review-avatar"><div><div class="review-name">Emeka N.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <p class="review-text">"Ordered afang leaves from the UK and they arrived within 7 days, perfectly packaged. The freshness was unbelievable. Rare quality for a diaspora customer."</p>
+    </div>
+    <div class="review-card" data-aos="fade-up" data-aos-delay="120">
+      <div class="review-top"><img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=120&q=80" alt="Blessing A." class="review-avatar"><div><div class="review-name">Blessing A.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <p class="review-text">"Tom Brown for my baby has been a game changer. No additives, no preservatives — just pure wholesome nutrition. The packaging is neat and professional."</p>
+    </div>
+    <div class="review-card" data-aos="fade-up" data-aos-delay="180">
+      <div class="review-top"><img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=120&q=80" alt="Chukwudi M." class="review-avatar"><div><div class="review-name">Chukwudi M.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <p class="review-text">"The ginger and turmeric powder is exactly what my smoothie business needed. Pure, potent and consistent every single order. Highly recommend for businesses."</p>
+    </div>
+    <div class="review-card hidden"><div class="review-top"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80" alt="James T." class="review-avatar"><div><div class="review-name">James T.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div><p class="review-text">"Same-day delivery in Akwa Ibom is real — I ordered at noon and had my package by 4pm. Fufu flour was fresh and my family loved the meal we made."</p></div>
+    <div class="review-card hidden"><div class="review-top"><img src="https://images.unsplash.com/photo-1546961342-ea5f62d5a27b?w=120&q=80" alt="Ngozi P." class="review-avatar"><div><div class="review-name">Ngozi P.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div><p class="review-text">"Their zobo herbal mix gives the most flavorful zobo drink I have ever had. No artificial coloring needed — the natural hibiscus color is gorgeous."</p></div>
+    <div class="review-card hidden"><div class="review-top"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&q=80" alt="Uche B." class="review-avatar"><div><div class="review-name">Uche B.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div><p class="review-text">"I bulk order monthly for my restaurant and FreshFusion always delivers on time with consistent quality. The team is very responsive on WhatsApp."</p></div>
+    <div class="review-card hidden"><div class="review-top"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80" alt="Adaeze K." class="review-avatar"><div><div class="review-name">Adaeze K.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div><p class="review-text">"The wheat bread is freshly baked and incredibly soft. My kids refuse to eat any other bread now. A truly premium product at a very fair price."</p></div>
+    <div class="review-card hidden"><div class="review-top"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=120&q=80" alt="Miriam D." class="review-avatar"><div><div class="review-name">Miriam D.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div><p class="review-text">"Ordered cocoyam flour from Lagos and it arrived in 2 days, neatly packed. The flour was smooth and made perfect ofe onugbu. Excellent service!"</p></div>
+    <div class="review-card hidden"><div class="review-top"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=80" alt="Taiwo S." class="review-avatar"><div><div class="review-name">Taiwo S.</div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div><p class="review-text">"Their cinnamon powder has the most intense, authentic flavor I have found in Nigeria. Clearly premium grade and not the watered-down versions sold elsewhere."</p></div>
+  </div>
+  <div class="reviews-toggle" data-aos="fade-up">
+    <button class="btn-toggle">Show More Reviews</button>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq">
+  <div class="section-header section-center" data-aos="fade-up">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+  </div>
+  <div class="faq-list" data-aos="fade-up">
+    <div class="faq-item">
+      <button class="faq-question">Are your products 100% natural?<span class="faq-arrow">&#8964;</span></button>
+      <div class="faq-answer"><p>Yes. All FreshFusion Foods products are 100% natural with no artificial flavors, colors, or preservatives. We source directly from trusted farms and process hygienically at our certified facility.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How long does delivery take?<span class="faq-arrow">&#8964;</span></button>
+      <div class="faq-answer"><p>Delivery within Akwa Ibom is same day for orders before 2PM. Nationwide takes 2–3 working days. International orders are delivered in approximately 7 days.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer wholesale pricing?<span class="faq-arrow">&#8964;</span></button>
+      <div class="faq-answer"><p>Yes. Contact us on WhatsApp at +234 903 153 8922 to discuss wholesale quantities and rates for your business needs.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How do I place an order?<span class="faq-arrow">&#8964;</span></button>
+      <div class="faq-answer"><p>Add products to cart and checkout, click the WhatsApp button on any product to order directly, or message us on WhatsApp at +234 903 153 8922.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you deliver internationally?<span class="faq-arrow">&#8964;</span></button>
+      <div class="faq-answer"><p>Yes. International delivery takes approximately 7 days. Contact us on WhatsApp to confirm shipping costs to your specific country.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COUNTDOWN ===================== -->
+<div class="countdown-section">
+  <div class="countdown-bg"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1400&q=80" alt="Offer background"></div>
+  <div class="countdown-overlay"></div>
+  <div class="countdown-inner" data-aos="fade-up">
+    <span class="section-label">Limited Time Offer</span>
+    <h2>Order Today and Get Priority Delivery</h2>
+    <p>This offer expires soon. Place your order now and enjoy fresh natural products delivered right to your door.</p>
+    <div class="countdown-timer">
+      <div class="timer-block"><span class="timer-num" id="cd-days">00</span><span class="timer-label">Days</span></div>
+      <div class="timer-block"><span class="timer-num" id="cd-hours">00</span><span class="timer-label">Hours</span></div>
+      <div class="timer-block"><span class="timer-num" id="cd-mins">00</span><span class="timer-label">Mins</span></div>
+      <div class="timer-block"><span class="timer-num" id="cd-secs">00</span><span class="timer-label">Secs</span></div>
+    </div>
+    <a href="shop.html" class="btn-primary" style="display:inline-block;">Shop Now</a>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-text">
+        <strong>FreshFusion Foods Limited</strong>
+        <span>Premium Natural Food Products</span>
+      </div>
+      <p>From farm to table, we deliver high-quality, natural, and hygienically processed food products nationwide and internationally.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/2349031538922" target="_blank" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="booking.html">Place Order</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="shop.html">Tigernut Products</a></li>
+        <li><a href="shop.html">Spice Powders</a></li>
+        <li><a href="shop.html">Leaf Vegetables</a></li>
+        <li><a href="shop.html">Flours &amp; Cereals</a></li>
+        <li><a href="shop.html">Fresh Bread</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><span>&#128222;</span><span>+234 903 153 8922</span></p>
+      <p><span>&#128205;</span><span>Akwa Ibom State, Nigeria</span></p>
+      <p><span>&#9989;</span><span>WhatsApp orders available 24/7</span></p>
+      <p style="margin-top:16px;"><a href="https://wa.me/2349031538922?text=Hello%20FreshFusion%20Foods%2C%20I%20want%20to%20order." target="_blank" class="btn-order" style="font-size:13px;">Chat on WhatsApp</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 FreshFusion Foods Limited. All rights reserved.</p></div>
+</footer>
+
+<!-- CART SIDEBAR (no scroll lock — user can still scroll) -->
+<div class="cart-overlay"></div>
+<div class="cart-sidebar">
+  <div class="cart-head">
+    <h3>Your Cart</h3>
+    <button class="cart-close">&#215;</button>
+  </div>
+  <div class="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><strong>&#8358;0</strong></div>
+    <a href="booking.html" class="btn-checkout">Proceed to Checkout</a>
+  </div>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/2349031538922?text=Hello%20FreshFusion%20Foods%2C%20I%20want%20to%20place%20an%20order." target="_blank" class="wa-float" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
