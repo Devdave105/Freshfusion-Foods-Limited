@@ -103,7 +103,7 @@ function renderCart() {
   $$('.mobile-cart-count').forEach(b => b.textContent = count);
 
   const body  = $('.cart-items');
-  const total = $('.cart-total strong');
+  const total = $('.cart-foot .cart-total-row strong');
   if (!body) return;
 
   if (!cart.length) {
@@ -141,9 +141,13 @@ function renderCart() {
 
   if (total) total.textContent = naira(getCartTotal());
 
-  // update checkout btn
-  const btn = $('.cart-wa-checkout');
-  if (btn) btn.disabled = !cart.length;
+  // update proceed button
+  const goBtn = $('.btn-go-checkout');
+  if (goBtn) goBtn.disabled = !cart.length;
+
+  // update checkout btn (on checkout panel)
+  const coBtn = $('.cart-wa-checkout');
+  if (coBtn) coBtn.disabled = !cart.length;
 
   // summary line count
   const summary = $('.cart-summary-count');
@@ -155,10 +159,83 @@ function openCart() {
   renderCart();
   $('.cart-overlay')?.classList.add('open');
   $('.cart-sidebar')?.classList.add('open');
+  showCartView('items'); // always start on items view
 }
 function closeCart() {
   $('.cart-overlay')?.classList.remove('open');
   $('.cart-sidebar')?.classList.remove('open');
+  showCartView('items');
+}
+
+/* Toggle between items view and checkout view */
+function showCartView(view) {
+  const itemsView    = document.getElementById('cart-items-view');
+  const checkoutView = document.getElementById('cart-checkout-view');
+  if (!itemsView || !checkoutView) return;
+  if (view === 'checkout') {
+    itemsView.style.display    = 'none';
+    checkoutView.style.display = 'flex';
+    // populate order summary in checkout
+    renderCheckoutSummary();
+  } else {
+    itemsView.style.display    = 'flex';
+    checkoutView.style.display = 'none';
+  }
+}
+
+function renderCheckoutSummary() {
+  const list     = document.getElementById('co-item-list');
+  const total    = document.getElementById('co-total');
+  const subtotal = document.getElementById('co-subtotal');
+  const grand    = document.getElementById('co-grand');
+  const cart     = getCart();
+  if (!list) return;
+  list.innerHTML = cart.map(i => `
+    <div class="co-item">
+      <span class="co-item-name">${i.name} <span class="co-item-qty">x${i.qty||1}</span></span>
+      <span class="co-item-price">${naira(i.price*(i.qty||1))}</span>
+    </div>`).join('');
+  const sub = getCartTotal();
+  if (total)    total.textContent    = naira(sub);
+  if (subtotal) subtotal.textContent = naira(sub);
+  if (grand)    grand.textContent    = naira(sub); // no fee selected yet
+  // reset delivery selector and fee
+  const sel = document.getElementById('co-delivery');
+  if (sel) sel.value = '';
+  const feeEl = document.getElementById('co-fee');
+  if (feeEl) feeEl.textContent = 'Select location';
+  const infoEl = document.getElementById('co-delivery-info');
+  if (infoEl) { infoEl.textContent = ''; infoEl.classList.remove('show'); }
+}
+
+function updateDeliveryFee() {
+  const sel     = document.getElementById('co-delivery');
+  const feeEl   = document.getElementById('co-fee');
+  const grandEl = document.getElementById('co-grand');
+  const subEl   = document.getElementById('co-subtotal');
+  const infoEl  = document.getElementById('co-delivery-info');
+  if (!sel || !feeEl) return;
+
+  const fees  = { akwa_ibom: 0, nationwide: 2500, international: 5000 };
+  const infos = {
+    akwa_ibom:     'Same day delivery within Akwa Ibom – orders before 2PM.',
+    nationwide:    'Delivery to all 36 states in Nigeria within 2–3 working days.',
+    international: 'International shipping worldwide – approximately 7 days.',
+  };
+
+  const fee = fees[sel.value] ?? null;
+
+  if (fee === null) {
+    feeEl.textContent = 'Select location';
+    if (infoEl) { infoEl.textContent = ''; infoEl.classList.remove('show'); }
+    return;
+  }
+
+  feeEl.textContent = fee === 0 ? 'Free (same day)' : naira(fee);
+  const sub = getCartTotal();
+  if (subEl)   subEl.textContent  = naira(sub);
+  if (grandEl) grandEl.textContent = naira(sub + fee);
+  if (infoEl)  { infoEl.textContent = infos[sel.value]; infoEl.classList.add('show'); }
 }
 
 /* ===================== CART WHATSAPP CHECKOUT ===================== */
@@ -166,11 +243,58 @@ function cartCheckoutWhatsApp() {
   const cart = getCart();
   if (!cart.length) return;
 
-  const lines = cart.map(i => `  \u2022 ${i.name} x${i.qty || 1} = ${naira(i.price * (i.qty || 1))}`).join('\n');
-  const total = naira(getCartTotal());
-  const count = getCartCount();
+  const name     = (document.getElementById('co-name')?.value    || '').trim();
+  const phone    = (document.getElementById('co-phone')?.value   || '').trim();
+  const delivery = document.getElementById('co-delivery')?.value || '';
+  const address  = (document.getElementById('co-address')?.value || '').trim();
+  const busstop  = (document.getElementById('co-busstop')?.value || '').trim();
+  const note     = (document.getElementById('co-note')?.value    || '').trim();
 
-  const msg = `Hello FreshFusion Foods Limited,\n\nI would like to place an order for ${count} item${count !== 1 ? 's' : ''}:\n\n${lines}\n\nOrder Total: ${total}\n\nPlease confirm availability and delivery details.\n\nThank you.`;
+  if (!name)  { alert('Please enter your full name.'); document.getElementById('co-name')?.focus(); return; }
+  if (!phone) { alert('Please enter your phone number.'); document.getElementById('co-phone')?.focus(); return; }
+  if (!delivery) { alert('Please select a delivery type.'); document.getElementById('co-delivery')?.focus(); return; }
+  if (!address) { alert('Please enter your delivery address.'); document.getElementById('co-address')?.focus(); return; }
+
+  const fees = { akwa_ibom: 0, nationwide: 2500, international: 5000 };
+  const fee  = fees[delivery] ?? 0;
+  const deliveryLabels = {
+    akwa_ibom:     'Akwa Ibom – Same Day Delivery (Free)',
+    nationwide:    'Nationwide – 2 to 3 Working Days (' + naira(2500) + ')',
+    international: 'International – ~7 Days (' + naira(5000) + ')',
+  };
+
+  const itemLines = cart.map(i =>
+    `  \u2022 ${i.name} \u00d7${i.qty||1}  =  ${naira(i.price*(i.qty||1))}`
+  ).join('\n');
+
+  const subtotal  = getCartTotal();
+  const grand     = subtotal + fee;
+  const itemCount = getCartCount();
+
+  const msg =
+`Hello FreshFusion Foods Limited,
+
+I would like to place an order. Please find my details below:
+
+\u2500\u2500\u2500 CUSTOMER DETAILS \u2500\u2500\u2500
+Name:        ${name}
+Phone:       ${phone}
+Address:     ${address}${busstop ? '\nBus Stop:    ' + busstop : ''}
+
+\u2500\u2500\u2500 DELIVERY \u2500\u2500\u2500
+${deliveryLabels[delivery]}
+
+\u2500\u2500\u2500 ORDER (${itemCount} item${itemCount!==1?'s':''}) \u2500\u2500\u2500
+${itemLines}
+
+\u2500\u2500\u2500 PAYMENT SUMMARY \u2500\u2500\u2500
+Subtotal:    ${naira(subtotal)}
+Delivery:    ${fee === 0 ? 'Free' : naira(fee)}
+\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+TOTAL:       ${naira(grand)}${note ? '\n\nNote: ' + note : ''}
+
+Please confirm my order and send payment details.
+Thank you.`;
 
   window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
 }
@@ -182,11 +306,25 @@ function initCart() {
   $('.cart-overlay')?.addEventListener('click', closeCart);
   $('.cart-close')?.addEventListener('click', closeCart);
 
-  // WhatsApp checkout from cart
-  $('.cart-wa-checkout')?.addEventListener('click', cartCheckoutWhatsApp);
+  // "Proceed to Checkout" — switch to checkout panel
+  document.addEventListener('click', e => {
+    if (e.target.closest('.cart-wa-checkout')) cartCheckoutWhatsApp();
+    if (e.target.closest('.btn-go-checkout')) {
+      if (!getCart().length) return;
+      showCartView('checkout');
+    }
+    if (e.target.closest('.btn-back-to-cart')) showCartView('items');
+  });
+
+  // Delivery fee update
+  document.addEventListener('change', e => {
+    if (e.target.id === 'co-delivery') updateDeliveryFee();
+  });
 
   // Clear cart
-  $('.cart-clear')?.addEventListener('click', () => { if (confirm('Clear your entire cart?')) clearCart(); });
+  $('.cart-clear')?.addEventListener('click', () => {
+    if (confirm('Clear your entire cart?')) { clearCart(); showCartView('items'); }
+  });
 
   // Product add to cart
   document.addEventListener('click', e => {
@@ -194,8 +332,8 @@ function initCart() {
     if (!btn) return;
     const card = btn.closest('[data-product]');
     if (!card) return;
-    const sel = card.querySelector('.size-select');
-    const opt = sel ? sel.options[sel.selectedIndex] : null;
+    const sel   = card.querySelector('.size-select');
+    const opt   = sel ? sel.options[sel.selectedIndex] : null;
     const name  = card.dataset.name;
     const baseP = parseFloat(card.dataset.price);
     const price = opt ? parseFloat(opt.dataset.price || baseP) : baseP;
